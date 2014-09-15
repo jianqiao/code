@@ -1,0 +1,262 @@
+
+
+            INSTALLATION SUMMARY
+            --------------------
+
+XSB Version:	   3.4.0
+Code name:	   Soy mILK
+Release date:	   2013-05-01
+Configuration:	   x86_64-unknown-linux-gnu
+Installation date: Mon Sep 15 09:56:33 CDT 2014
+
+  Build process is looking for XSB sources in:	  /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB
+  XSB should be installed in:			  /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB
+  Configuration-specific executables go in:	  /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/config/x86_64-unknown-linux-gnu-mt/bin
+  Configuration-specific libraries go in:	  /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/config/x86_64-unknown-linux-gnu-mt/lib
+  Object code goes in:				  /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/config/x86_64-unknown-linux-gnu-mt/saved.o
+  Site-specific code goes in:			  /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/site
+  Site configuration-specific code goes in:	  /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/site/config/x86_64-unknown-linux-gnu
+  XSB will be built with:			  gcc  -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  builtin.c will be built with: 		  gcc  -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  loader_xsb.c will be built with: 		  gcc  -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  emuloop.c will be built with: 		  gcc  -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  tr_utils.c will be built with:		  gcc  -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+  Loader flags: 				 -L/usr/local/lib -lodbc  -lpthread -lm -ldl -Wl,-export-dynamic -lpthread
+  Compilation mode:				  optimal
+  XSB abstract machine: 			  multi-threading
+  XSB scheduling strategy:			  local
+  Garbage Collection Stress-Test:		  no
+  Jumptable-based emulator loop:		  yes
+  Demand support:                                 no
+
+  Support for modular database drivers: 	  no
+  -- These drivers can also be configured later.
+  Native support for Oracle:			  no
+  Support for the old ODBC driver:		  yes
+      ODBC_CFLAGS:                                -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/local/include 
+
+  Java compiler:                                  /usr/bin/javac
+  Support for InterProlog's native engine:   	  no
+  -- JDK may not have been installed or
+  -- JAVA_HOME not set. You will still be able
+  -- to use InterProlog's subprocess engine.
+
+  POSIX regexp matching libraries:                yes
+  POSIX wildcard matching libraries:              yes
+
+  Curl support (HTTP protocol library):           yes
+  Curl C flags:        	                          -g -O2
+  Curl loader flags:                              
+
+  XPath support:				  no
+  PCRE support (Perl pattern matching):           yes
+  PCRE C flags:        	                          -g -O2
+  PCRE loader flags:                              
+
+
+
+make[1]: Entering directory `/afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/emu'
+
+Compiling XSB with gcc using -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+
+	[gcc] main_xsb.c
+	[gcc] auxlry.c
+	[gcc] biassert.c
+	[gcc] builtin.c using -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+	[gcc] cinterf.c
+	[gcc] conc_compl.c
+	[gcc] debug_xsb.c
+	[gcc] dis.c
+	[gcc] dynload.c
+	[gcc] dynamic_stack.c
+	[gcc] deadlock.c
+	[gcc] emuloop.c using -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+emuloop.c: In function ‘emuloop’:
+emuloop.c:1613: warning: cast from pointer to integer of different size
+emuloop.c:1642: warning: cast from pointer to integer of different size
+emuloop.c:1647: warning: cast from pointer to integer of different size
+	[gcc] error_xsb.c
+	[gcc] findall.c
+	[gcc] function.c
+	[gcc] hash_xsb.c
+	[gcc] hashtable_xsb.c
+	[gcc] heap_xsb.c
+	[gcc] init_xsb.c
+	[gcc] inst_xsb.c
+	[gcc] io_builtins_xsb.c
+	[gcc] loader_xsb.c using -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+	[gcc] memory_xsb.c
+	[gcc] orient_xsb.c
+	[gcc] pathname_xsb.c
+	[gcc] psc_xsb.c
+	[gcc] random_xsb.c
+	[gcc] remove_unf.c
+	[gcc] residual.c
+	[gcc] rw_lock.c
+	[gcc] scc_xsb.c
+	[gcc] slgdelay.c
+	[gcc] socket_xsb.c
+	[gcc] string_xsb.c
+	[gcc] storage_xsb.c
+	[gcc] struct_manager.c
+	[gcc] struct_intern.c
+	[gcc] sub_delete.c
+	[gcc] subp.c
+	[gcc] system_xsb.c
+	[gcc] table_stats.c
+	[gcc] tables.c
+	[gcc] thread_xsb.c
+thread_xsb.c: In function ‘xsb_thread_request’:
+thread_xsb.c:1699: warning: implicit declaration of function ‘gettimeofday’
+	[gcc] timer_xsb.c
+timer_xsb.c: In function ‘make_timed_call’:
+timer_xsb.c:267: warning: passing argument 3 of ‘pthread_create’ from incompatible pointer type
+/usr/include/pthread.h:225: note: expected ‘void * (*)(void *)’ but argument is of type ‘void (*)(struct xsbTimeout *)’
+	[gcc] token_xsb.c
+	[gcc] tr_utils.c using -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+tr_utils.c: In function ‘xsb_compute_ans_depends_scc’:
+tr_utils.c:4876: warning: cast from pointer to integer of different size
+	[gcc] trace_xsb.c
+	[gcc] trie_lookup.c
+	[gcc] trie_search.c
+	[gcc] tries.c
+tries.c: In function ‘get_lastnode_cs_retskel’:
+tries.c:2609: warning: cast from pointer to integer of different size
+	[gcc] tst_insert.c
+	[gcc] tst_retrv.c
+	[gcc] tst_unify.c
+	[gcc] tst_utils.c
+	[gcc] varstring.c
+	[gcc] ubi_BinTree.c
+	[gcc] ubi_SplayTree.c
+	[gcc] hashtable.c
+	[gcc] hashtable_itr.c
+	[gcc] url_encode.c
+	[gcc] incr_xsb.c
+	[gcc] call_graph_xsb.c
+call_graph_xsb.c: In function ‘xsb_compute_scc’:
+call_graph_xsb.c:1437: warning: cast from pointer to integer of different size
+	[gcc] odbc_xsb.c
+odbc_xsb.c: In function ‘print_hdbc’:
+odbc_xsb.c:127: warning: cast from pointer to integer of different size
+odbc_xsb.c:127: warning: cast to pointer from integer of different size
+odbc_xsb.c:128: warning: cast from pointer to integer of different size
+odbc_xsb.c: In function ‘PrintErrorMsg’:
+odbc_xsb.c:402: warning: pointer targets in passing argument 1 of ‘string_find’ differ in signedness
+cinterf.h:241: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:403: warning: pointer targets in passing argument 1 of ‘string_find’ differ in signedness
+cinterf.h:241: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c: In function ‘SetCursorClose’:
+odbc_xsb.c:468: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c: In function ‘ODBCConnect’:
+odbc_xsb.c:543: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness
+/usr/include/string.h:128: note: expected ‘char * __restrict__’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:543: warning: pointer targets in passing argument 2 of ‘strcpy’ differ in signedness
+/usr/include/string.h:128: note: expected ‘const char * __restrict__’ but argument is of type ‘UCHAR *’
+odbc_xsb.c: In function ‘FindFreeCursor’:
+odbc_xsb.c:689: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:689: warning: pointer targets in passing argument 1 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:689: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:689: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:689: warning: pointer targets in passing argument 1 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:689: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:689: warning: pointer targets in passing argument 1 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:689: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:689: warning: pointer targets in passing argument 1 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:689: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:788: warning: pointer targets in passing argument 1 of ‘strcpy’ differ in signedness
+/usr/include/string.h:128: note: expected ‘char * __restrict__’ but argument is of type ‘UCHAR *’
+odbc_xsb.c: In function ‘SetBindVal’:
+odbc_xsb.c:938: warning: pointer targets in assignment differ in signedness
+odbc_xsb.c:948: warning: pointer targets in assignment differ in signedness
+odbc_xsb.c:956: warning: pointer targets in assignment differ in signedness
+odbc_xsb.c:989: warning: pointer targets in assignment differ in signedness
+odbc_xsb.c:997: warning: pointer targets in assignment differ in signedness
+odbc_xsb.c:1004: warning: pointer targets in assignment differ in signedness
+odbc_xsb.c: In function ‘ODBCColumns’:
+odbc_xsb.c:1196: warning: pointer targets in passing argument 2 of ‘SQLColumns’ differ in signedness
+/usr/local/include/sql.h:621: note: expected ‘SQLCHAR *’ but argument is of type ‘char *’
+odbc_xsb.c:1196: warning: pointer targets in passing argument 4 of ‘SQLColumns’ differ in signedness
+/usr/local/include/sql.h:621: note: expected ‘SQLCHAR *’ but argument is of type ‘char *’
+odbc_xsb.c:1196: warning: pointer targets in passing argument 6 of ‘SQLColumns’ differ in signedness
+/usr/local/include/sql.h:621: note: expected ‘SQLCHAR *’ but argument is of type ‘char *’
+odbc_xsb.c: In function ‘ODBCDataSources’:
+odbc_xsb.c:1378: warning: pointer targets in passing argument 1 of ‘string_find’ differ in signedness
+cinterf.h:241: note: expected ‘const char *’ but argument is of type ‘SQLCHAR *’
+odbc_xsb.c:1389: warning: pointer targets in passing argument 1 of ‘string_find’ differ in signedness
+cinterf.h:241: note: expected ‘const char *’ but argument is of type ‘SQLCHAR *’
+odbc_xsb.c: In function ‘ODBCDrivers’:
+odbc_xsb.c:1467: warning: pointer targets in passing argument 1 of ‘string_find’ differ in signedness
+cinterf.h:241: note: expected ‘const char *’ but argument is of type ‘SQLCHAR *’
+odbc_xsb.c:1476: warning: pointer targets in initialization differ in signedness
+odbc_xsb.c:1496: warning: pointer targets in assignment differ in signedness
+odbc_xsb.c: In function ‘build_codes_list’:
+odbc_xsb.c:1709: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘byte *’
+odbc_xsb.c: In function ‘GetColumn’:
+odbc_xsb.c:1777: warning: pointer targets in passing argument 1 of ‘string_find’ differ in signedness
+cinterf.h:241: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1785: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1788: warning: pointer targets in assignment differ in signedness
+odbc_xsb.c:1794: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1794: warning: pointer targets in passing argument 2 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:1794: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1794: warning: pointer targets in passing argument 2 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:1794: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1794: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1794: warning: pointer targets in passing argument 2 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:1794: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1794: warning: pointer targets in passing argument 2 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:1794: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1805: warning: pointer targets in passing argument 1 of ‘string_find’ differ in signedness
+cinterf.h:241: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1813: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1814: warning: pointer targets in assignment differ in signedness
+odbc_xsb.c:1820: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1820: warning: pointer targets in passing argument 2 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:1820: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1820: warning: pointer targets in passing argument 2 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:1820: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1820: warning: pointer targets in passing argument 1 of ‘strlen’ differ in signedness
+/usr/include/string.h:399: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1820: warning: pointer targets in passing argument 2 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:1820: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c:1820: warning: pointer targets in passing argument 2 of ‘__builtin_strcmp’ differ in signedness
+odbc_xsb.c:1820: note: expected ‘const char *’ but argument is of type ‘UCHAR *’
+odbc_xsb.c: In function ‘ODBCGetInfo’:
+odbc_xsb.c:1889: warning: pointer targets in passing argument 3 of ‘ctop_string’ differ in signedness
+cinterf.h:234: note: expected ‘const char *’ but argument is of type ‘SQLCHAR *’
+
+Making XSB executable /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/config/x86_64-unknown-linux-gnu-mt/bin/xsb 
+
+	[gcc] -o /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/config/x86_64-unknown-linux-gnu-mt/bin/xsb
+error_xsb.o: In function `print_incomplete_tables_on_abort':
+error_xsb.c:(.text+0xe2): warning: the use of `tempnam' is dangerous, better use `mkstemp'
+make[1]: Leaving directory `/afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/emu'
+make[1]: Entering directory `/afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/emu'
+
+Compiling XSB with gcc using -O3 -fno-strict-aliasing  -Wall -pipe  -D_GNU_SOURCE
+
+
+Making XSB executable /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/config/x86_64-unknown-linux-gnu-mt/bin/xsb 
+
+	[gcc] -o /afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/config/x86_64-unknown-linux-gnu-mt/bin/xsb
+error_xsb.o: In function `print_incomplete_tables_on_abort':
+error_xsb.c:(.text+0xe2): warning: the use of `tempnam' is dangerous, better use `mkstemp'
+make[1]: Leaving directory `/afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/emu'
+make[1]: Entering directory `/afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/gpp'
+
+	[gcc] gpp.c using  
+	[gcc] -o gpp
+
+make[1]: Leaving directory `/afs/cs.wisc.edu/u/j/i/jianqiao/Desktop/code/XSB/gpp'
+
+

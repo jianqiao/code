@@ -1,0 +1,11 @@
+xAuthLog('ip', 'user', 0).
+ip2location('ip', 'brief', 'country', 'state', 'city').
+
+query(U) :- 
+		xAuthLog(IP1,U,T1),
+		xAuthLog(IP2,U,T2),
+		abs(T1 - T2) < 3600,
+
+		ip2location(IP1, _, _, _, City),
+		City \== 'Madison'.
+

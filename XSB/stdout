@@ -1,0 +1,73 @@
+:- [tools].
+
+DllExport int call_conv forn_animal(CTXTdecl)
+{
+	char *str = "CCC";
+	extern_ctop_string(1, (char *)string_find(str, 2));
+
+	return TRUE;
+}
+
+
+
+animal('AAA').
+dog('BBB').
+animal(X) :- dog(X).
+animal(X) :- forn_animal(X).
+
+
+
+module('tables', unloaded).
+entry('tables',0x2646a10,'tnot'/1,'ORDI','UNLOADED','n/a',0x2646a30).
+
+module('ccallxsb', unloaded).
+entry('ccallxsb',0x26468e0,'c_callloop_query_loop'/1,'ORDI','UNLOADED','n/a',0x2646900).
+
+module('loader', unloaded).
+entry('loader',0x26463a0,'_$load_undef'/1,'ORDI','UNLOADED','n/a',0x26463c0).
+
+module('setof', unloaded).
+entry('setof',0x26466a0,'bagof'/3,'ORDI','UNLOADED','n/a',0x26466c0).
+entry('setof',0x2646620,'setof'/3,'ORDI','UNLOADED','n/a',0x2646640).
+entry('setof',0x2646580,'^'/2,'ORDI','UNLOADED','n/a',0x26465a0).
+
+module('standard', unloaded).
+entry('standard',0x2646af0,'$$exception_ball'/2,'ORDI','VISIBLE','n/a',0x2646b10).
+entry('standard',0x26467c0,'->'/2,'ORDI','UNLOADED','n/a',0x26467e0).
+entry('standard',0x2646740,'!'/0,'ORDI','UNLOADED','n/a',0x2646760).
+entry('standard',0x26464e0,':'/2,'ORDI','UNLOADED','n/a',0x2646500).
+entry('standard',0x2646440,','/2,'ORDI','UNLOADED','n/a',0x2646460).
+entry('standard',0x2646300,'_$visited'/0,'ORDI','UNLOADED','n/a',0x2646320).
+entry('standard',0x2646220,'true'/0,'ORDI','UNLOADED','n/a',0x2646240).
+
+module('usermod',loaded).
+equiv(usermod,global).
+
+
+/*text below		*/
+
+segment([
+     inst(0x2647400, test_heap, 0, 2000), 
+     inst(0x2647410, try, 0, 0x2647430), 
+     inst(0x2647420, trust, 0, 0x2647478), 
+     inst(0x2647430, allocate_gc, 2, 3), 
+     inst(0x2647438, getpbreg, 2), 
+     inst(0x2647440, putcon, r1, 0x2647068), 
+     inst(0x2647450, putnil, r2), 
+     inst(0x2647458, call, 3, 0x2645ea0, '.'/2), 
+     inst(0x2647468, putpbreg_ci, 2, 0, 3), 
+     inst(0x2647470, fail), 
+     inst(0x2647478, proceed)]).
+segment([
+     inst(0x26474b0, test_heap, 1, 2000), 
+     inst(0x26474c0, try, 1, 0x26474f0), 
+     inst(0x26474d0, retry, 1, 0x2647508), 
+     inst(0x26474e0, trust, 1, 0x2647518), 
+     inst(0x26474f0, getcon, r1, 0x26471c8), 
+     inst(0x2647500, proceed), 
+     inst(0x2647508, xsb_execute, 0x2647200, 'dog'/1), 
+     inst(0x2647518, xsb_execute, 0x2647360, 'forn_animal'/1)]).
+segment([
+     inst(0x2647550, test_heap, 1, 2000), 
+     inst(0x2647560, getcon, r1, 0x2647328), 
+     inst(0x2647570, proceed)]).

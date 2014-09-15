@@ -1,0 +1,7 @@
+cat('tom').
+cat(X) :- dog(X).
+cat('bob').
+
+dog('adam').
+
+

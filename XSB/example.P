@@ -1,0 +1,30 @@
+links(4, 'St.-Germain', 'Odeon').
+links(4, 'Odeon', 'St.-Michel').
+links(4, 'St.-Michel', 'Chatelet').
+links(1, 'Chatelet', 'Louvre').
+links(1, 'Louvre', 'Palais-Royal').
+links(1, 'Palais-Royal', 'Tuileries').
+links(1, 'Tuileries', 'Concorde').
+links(9, 'Pont de Sevres', 'Billancourt').
+links(9, 'Billancourt', 'Michel-Ange').
+links(9, 'Michel-Ange', 'Iena').
+links(9, 'Iena', 'F.D.Roosevelt').
+links(9, 'F.D.Roosevelt', 'Republique').
+links(9, 'Republique', 'Voltaire').
+
+:- table st_Reachable/2.
+
+st_Reachable(X, X).
+st_Reachable(X, Y) :- st_Reachable(X, Z), links(_, Z, Y).
+li_Reachable(X, U) :- st_Reachable(X, Z), links(U, Z, _).
+
+ans_1(Y) :- st_Reachable('Odeon', Y).
+ans_2(U) :- li_Reachable('Odeon', U).
+ans_3()  :- st_Reachable('Odeon', 'Chatelet').
+
+
+
+
+
+
+
